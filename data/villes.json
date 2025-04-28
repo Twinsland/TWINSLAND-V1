@@ -1,0 +1,28 @@
+{
+    "villes": [
+        {
+            "name": "Cotonou",
+            "description": "Capitale économique du Bénin, moderne et vibrante.",
+            "x": 50,
+            "y": 80
+        },
+        {
+            "name": "Parakou",
+            "description": "Centre commercial du nord du Bénin, riche en traditions.",
+            "x": 30,
+            "y": 20
+        },
+        {
+            "name": "Porto-Novo",
+            "description": "Capitale administrative du Bénin, empreinte de culture.",
+            "x": 70,
+            "y": 85
+        },
+        {
+            "name": "Abomey-Calavi",
+            "description": "Ville en pleine croissance à proximité de Cotonou.",
+            "x": 45,
+            "y": 75
+        }
+    ]
+}
