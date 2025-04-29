@@ -20,15 +20,26 @@ body {
   }
   
   .city-label {
+    font-family: 'IM Fell English SC', serif; /* ou Uncial Antiqua si dispo */
+    background: linear-gradient(#f6e3b4, #e3c68b); /* aspect vieux parchemin */
+    color: #5a2b0c;
+    padding: 6px 12px;
+    border: 2px solid #c59b61;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg);
+    font-size: 1.1rem;
     position: absolute;
-    font-family: 'IM Fell English', serif;
-    color: #8B2E2E;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: rgba(255, 248, 220, 0.6);
-    padding: 4px 10px;
-    border-radius: 8px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+  }
+  
+  .city-label:hover {
+    transform: scale(1.05) rotate(-2deg);
+  }
+  
   }
   
   /* Positionnement spécifique */
