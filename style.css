@@ -27,7 +27,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #ff5722;
+    background-color: #ffb522;
     border: 2px solid #ffffff;
     border-radius: 50%;
     cursor: pointer;
@@ -37,7 +37,7 @@ body {
 
 .city:hover {
     transform: translate(-50%, -50%) scale(1.5);
-    background-color: #ff8a65;
+    background-color: #ffbc65;
 }
 
 .popup {
