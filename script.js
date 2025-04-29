@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const openBtn = document.getElementById("openMarketplaceBtn");
+const closeBtn = document.getElementById("closeMarketplaceBtn");
+const panel = document.getElementById("marketplacePanel");
+
+openBtn.addEventListener("click", () => {
+  panel.classList.remove("hidden");
+  panel.classList.add("visible");
+});
+
+closeBtn.addEventListener("click", () => {
+  panel.classList.remove("visible");
+  setTimeout(() => panel.classList.add("hidden"), 400);
+});
