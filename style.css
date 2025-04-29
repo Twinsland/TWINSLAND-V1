@@ -40,8 +40,6 @@ body {
     transform: scale(1.05) rotate(-2deg);
   }
   
-  }
-  
   /* Positionnement spécifique */
   .cotonou {
     top: -3900%; left: 18%;
