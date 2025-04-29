@@ -3,24 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Twinsland - Carte Interactive</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+  <title>Twinsland Map</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      cursor: default;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 768px;
+      margin: auto;
+    }
+
+    .map-container img {
+      width: 100%;
+      display: block;
+    }
+
+    .city-label {
+      position: absolute;
+      color: #7c2d12;
+      font-weight: bold;
+      font-size: 18px;
+      text-shadow: 1px 1px 3px #fff;
+      cursor: pointer;
+    }
+
+    .parcelle {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 165, 0, 0.6);
+      border: 2px solid #e25822;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .parcelle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 6px #ff6600;
+    }
+  </style>
 </head>
 <body>
-  <section style="position: relative; width: 100%; max-width: 768px; margin: auto;">
-    <img src="assets/images/twinsland_map.png" alt="Carte de Twinsland" style="width: 100%; display: block;">
+  <div class="map-container">
+    <img src="assets/images/twinsland_map.webp" alt="Carte de Twinsland" />
 
-    <!-- Labels de ville avec classe ajoutée -->
-    <div class="map-container">
-      <img src="assets/images/twinsland_map_clean.webp" alt="Carte de Twinsland" class="map-image">
-      
-      <span class="city-label cotonou">Cotonou</span>
-      <span class="city-label abomey-calavi">Abomey-Calavi</span>
-      <span class="city-label porto-novo">Porto-Novo</span>
-      <span class="city-label parakou">Parakou</span>
-    </div>
+    <!-- Labels des villes -->
+    <div class="city-label" style="top: 20%; left: 18%;">Cotonou</div>
+    <div class="city-label" style="top: 60%; left: 14%;">Abomey-Calavi</div>
+    <div class="city-label" style="top: 45%; left: 65%;">Porto-Novo</div>
+    <div class="city-label" style="top: 10%; left: 70%;">Parakou</div>
 
-  </section>
+    <!-- Parcelles -->
+    <div class="parcelle" style="top: 22%; left: 20%;" onclick="parcelleClick('Cotonou #1')"></div>
+    <div class="parcelle" style="top: 24%; left: 24%;" onclick="parcelleClick('Cotonou #2')"></div>
+
+    <div class="parcelle" style="top: 62%; left: 15%;" onclick="parcelleClick('Abomey-Calavi #1')"></div>
+    <div class="parcelle" style="top: 64%; left: 18%;" onclick="parcelleClick('Abomey-Calavi #2')"></div>
+
+    <div class="parcelle" style="top: 47%; left: 67%;" onclick="parcelleClick('Porto-Novo #1')"></div>
+    <div class="parcelle" style="top: 49%; left: 70%;" onclick="parcelleClick('Porto-Novo #2')"></div>
+
+    <div class="parcelle" style="top: 12%; left: 72%;" onclick="parcelleClick('Parakou #1')"></div>
+    <div class="parcelle" style="top: 14%; left: 75%;" onclick="parcelleClick('Parakou #2')"></div>
+  </div>
+
+  <script>
+    function parcelleClick(nom) {
+      console.log("Parcelle cliquée :", nom);
+    }
+  </script>
 </body>
 </html>
