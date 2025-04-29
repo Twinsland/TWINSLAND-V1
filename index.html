@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twinsland - Carte Interactive</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twinsland V1</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="map-container">
-    <img src="assets/images/twinsland-map.jpg" alt="Carte de Twinsland" class="map-image">
+  <header>
+    <h1>Bienvenue sur Twinsland V1</h1>
+    <p>Explore la toute première carte virtuelle du Bénin !</p>
+  </header>
 
-    <!-- Points interactifs -->
-    <div class="city" style="top: 70%; left: 40%;" data-name="Cotonou" data-description="La ville premium modernisée avec plages, cocotiers et centre économique vibrant."></div>
-    <div class="city" style="top: 72%; left: 50%;" data-name="Porto-Novo" data-description="La capitale historique et culturelle du Bénin."></div>
-    <div class="city" style="top: 45%; left: 38%;" data-name="Parakou" data-description="Le grand carrefour commercial du Nord avec ses marchés animés."></div>
-    <div class="city" style="top: 68%; left: 42%;" data-name="Abomey-Calavi" data-description="La ville universitaire dynamique en pleine expansion."></div>
-</div>
+  <section id="map" style="text-align: center; margin-top: 20px;">
+    <img src="assets/images/twinsland_map.webp" alt="Carte de Twinsland" style="width: 90%; max-width: 1000px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  </section>
 
-<!-- Popup pour infos ville -->
-<div id="popup" class="popup hidden">
-    <h3 id="popup-title"></h3>
-    <p id="popup-description"></p>
-    <button id="close-popup">Fermer</button>
-</div>
+  <footer>
+    <p>&copy; 2025 Twinsland. Tous droits réservés.</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
