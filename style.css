@@ -10,101 +10,41 @@ body {
 .map-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.map-image {
+    max-width: 768px;
+    margin: auto;
+  }
+  
+  .map-image {
     width: 100%;
-    display: block;
-    border-radius: 20px;
-}
-
-.city {
+    height: auto;
+  }
+  
+  .city-label {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #ffb522;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.city:hover {
-    transform: translate(-50%, -50%) scale(1.5);
-    background-color: #ffbc65;
-}
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    text-align: center;
-}
-
-.city-label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #6B240C;
-    background-color: rgba(255, 248, 220, 0.85); /* ton parchemin clair */
-    padding: 6px 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transform: rotate(-2deg);
-    border: 2px solid #D4A373;
     font-family: 'IM Fell English', serif;
-    ...
+    color: #8B2E2E;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgba(255, 248, 220, 0.6);
+    padding: 4px 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
   }
   
-.popup.hidden {
-    display: none;
-}
-
-#popup-title {
-    margin-top: 0;
-    font-size: 24px;
-    color: #00796b;
-}
-
-#popup-description {
-    font-size: 16px;
-    color: #555;
-    margin: 10px 0;
-}
-
-#close-popup {
-    padding: 8px 16px;
-    background-color: #00796b;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#close-popup:hover {
-    background-color: #004d40;
-}
-
-.city-label {
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
+  /* Positionnement spécifique */
+  .cotonou {
+    top: 20%; left: 18%;
   }
   
-  .city-label:hover {
-    transform: scale(1.1);
-    color: #ff8c00; /* orange lumineux */
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+  .abomey {
+    top: 65%; left: 15%;
+  }
+  
+  .porto {
+    top: 50%; left: 55%;
+  }
+  
+  .parakou {
+    top: 30%; left: 60%;
   }
   
