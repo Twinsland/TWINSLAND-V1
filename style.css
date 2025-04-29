@@ -53,6 +53,19 @@ body {
     text-align: center;
 }
 
+.city-label {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6B240C;
+    background-color: rgba(255, 248, 220, 0.85); /* ton parchemin clair */
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+    border: 2px solid #D4A373;
+  }
+  
 .popup.hidden {
     display: none;
 }
