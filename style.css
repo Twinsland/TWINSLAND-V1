@@ -82,3 +82,15 @@ body {
 #close-popup:hover {
     background-color: #004d40;
 }
+
+.city-label {
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .city-label:hover {
+    transform: scale(1.1);
+    color: #ff8c00; /* orange lumineux */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+  }
+  
