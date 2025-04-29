@@ -59,7 +59,7 @@ body {
   }
   
   .marketplace-btn {
-    position: absolute;
+    position: relative;
     top: 6500px;
     right: 9000px;
     background: #ff6600;
