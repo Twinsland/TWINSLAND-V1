@@ -60,8 +60,8 @@ body {
   
   .marketplace-btn {
     position: fixed;
-    top: -7000px;
-    right: 75px;
+    top: 20px;
+    right: 20px;
     background: #ff6600;
     color: white;
     border: none;
