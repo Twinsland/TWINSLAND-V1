@@ -35,7 +35,3 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => panel.classList.add("hidden"), 400); // Cache après l'animation
     });
   });
-  
-  function parcelleClick(nom) {
-    console.log("Parcelle cliquée :", nom);
-  }

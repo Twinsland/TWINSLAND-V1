@@ -4,6 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twinsland Map</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      cursor: default;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 768px;
+      margin: auto;
+    }
+
+    .map-container img {
+      width: 100%;
+      display: block;
+    }
+
+    .city-label {
+      position: absolute;
+      color: #7c2d12;
+      font-weight: bold;
+      font-size: 18px;
+      text-shadow: 1px 1px 3px #fff;
+      cursor: pointer;
+    }
+
+    .parcelle {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 165, 0, 0.6);
+      border: 2px solid #e25822;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .parcelle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 6px #ff6600;
+    }
+  </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
