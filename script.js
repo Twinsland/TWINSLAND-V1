@@ -39,17 +39,3 @@ document.addEventListener('DOMContentLoaded', () => {
   function parcelleClick(nom) {
     console.log("Parcelle cliquée :", nom);
   }
-  
-  // script.js
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cities = document.querySelectorAll('.city-label');
-    const popup = document.getElementById('popup');
-    const popupTitle = document.getElementById('popup-title');
-    const popupDescription = document.getElementById('popup-description');
-    const closePopupBtn = document.getElementById('close-popup');
-
-    // Affichage du popup au clic sur une ville
-    cities.forEach(city => {
-        city.addEventListener('click', () => {
-            const name = city.getAttribute('data
