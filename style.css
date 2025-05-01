@@ -69,8 +69,8 @@ body {
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999; /
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   
   .marketplace-panel {
