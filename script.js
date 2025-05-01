@@ -16,28 +16,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closePopupBtn.addEventListener('click', () => {
-        popup.classList.add('hidden');
+    // script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById("openMarketplaceBtn");
+    const closeBtn = document.getElementById("closeMarketplaceBtn");
+    const panel = document.getElementById("marketplacePanel");
+  
+    // Lorsque le bouton Marketplace est cliqué, on affiche le panneau
+    openBtn.addEventListener("click", () => {
+      panel.classList.remove("hidden");
+      panel.classList.add("visible");
     });
-
-    // Fermer le popup si on clique en dehors
-    window.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            popup.classList.add('hidden');
-        }
+  
+    // Lorsque le bouton de fermeture est cliqué, on cache le panneau
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("visible");
+      setTimeout(() => panel.classList.add("hidden"), 400); // Cache après l'animation
     });
-});
+  });
+  
+  function parcelleClick(nom) {
+    console.log("Parcelle cliquée :", nom);
+  }
+  
+  // script.js
 
-const openBtn = document.getElementById("openMarketplaceBtn");
-const closeBtn = document.getElementById("closeMarketplaceBtn");
-const panel = document.getElementById("marketplacePanel");
+document.addEventListener('DOMContentLoaded', () => {
+    const cities = document.querySelectorAll('.city-label');
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const popupDescription = document.getElementById('popup-description');
+    const closePopupBtn = document.getElementById('close-popup');
 
-openBtn.addEventListener("click", () => {
-  panel.classList.remove("hidden");
-  panel.classList.add("visible");
-});
-
-closeBtn.addEventListener("click", () => {
-  panel.classList.remove("visible");
-  setTimeout(() => panel.classList.add("hidden"), 400);
-});
+    // Affichage du popup au clic sur une ville
+    cities.forEach(city => {
+        city.addEventListener('click', () => {
+            const name = city.getAttribute('data

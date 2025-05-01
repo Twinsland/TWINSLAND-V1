@@ -4,60 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twinsland Map</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      cursor: default;
-    }
-
-    .map-container {
-      position: relative;
-      width: 100%;
-      max-width: 768px;
-      margin: auto;
-    }
-
-    .map-container img {
-      width: 100%;
-      display: block;
-    }
-
-    .city-label {
-      position: absolute;
-      color: #7c2d12;
-      font-weight: bold;
-      font-size: 18px;
-      text-shadow: 1px 1px 3px #fff;
-      cursor: pointer;
-    }
-
-    .parcelle {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background-color: rgba(255, 165, 0, 0.6);
-      border: 2px solid #0974bb;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .parcelle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 6px #0974bb;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="map-container">
     <img src="assets/images/twinsland_map.png" alt="Carte de Twinsland" />
 
     <!-- Labels des villes -->
-    <div class="city-label" style="top: 20%; left: 18%;">Cotonou</div>
-    <div class="city-label" style="top: 60%; left: 14%;">Abomey-Calavi</div>
-    <div class="city-label" style="top: 45%; left: 65%;">Porto-Novo</div>
-    <div class="city-label" style="top: 10%; left: 70%;">Parakou</div>
+    <div class="city-label" data-name="Cotonou" data-description="La ville principale." style="top: 20%; left: 18%;">Cotonou</div>
+    <div class="city-label" data-name="Abomey-Calavi" data-description="Ville voisine de Cotonou." style="top: 60%; left: 14%;">Abomey-Calavi</div>
+    <div class="city-label" data-name="Porto-Novo" data-description="Capitale politique." style="top: 45%; left: 65%;">Porto-Novo</div>
+    <div class="city-label" data-name="Parakou" data-description="Ville du nord." style="top: 10%; left: 70%;">Parakou</div>
 
     <!-- Parcelles -->
     <div class="parcelle" style="top: 22%; left: 20%;" onclick="parcelleClick('Cotonou #1')"></div>
@@ -73,30 +30,29 @@
     <div class="parcelle" style="top: 14%; left: 75%;" onclick="parcelleClick('Parakou #2')"></div>
   </div>
 
-  <script>
-    function parcelleClick(nom) {
-      console.log("Parcelle cliquée :", nom);
-    }
-  </script>
-  <!-- Bouton pour ouvrir le panneau Marketplace -->
-<button id="openMarketplaceBtn" class="marketplace-btn">Marketplace</button>
-
-<!-- Panneau latéral -->
-<div id="marketplacePanel" class="marketplace-panel hidden">
-  <div class="marketplace-header">
-    <h2>Marketplace</h2>
-    <button id="closeMarketplaceBtn" class="close-btn">&times;</button>
-  </div>
-  <div class="marketplace-content">
-    <p>Aucune annonce pour l’instant...</p>
-    <!-- Exemple d’annonce -->
-    <!--
-    <div class="listing-card">
-      <h3>Parcelle à Cotonou</h3>
-      <p>5000 Zems - Quartier Zogbo</p>
+  <!-- Popup de la ville -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="popup-title"></h2>
+      <p id="popup-description"></p>
+      <button id="close-popup" class="close-btn">Fermer</button>
     </div>
-    -->
   </div>
-</div>
+
+  <!-- Bouton pour ouvrir le panneau Marketplace -->
+  <button id="openMarketplaceBtn" class="marketplace-btn">Marketplace</button>
+
+  <!-- Panneau latéral -->
+  <div id="marketplacePanel" class="marketplace-panel hidden">
+    <div class="marketplace-header">
+      <h2>Marketplace</h2>
+      <button id="closeMarketplaceBtn" class="close-btn">&times;</button>
+    </div>
+    <div class="marketplace-content">
+      <p>Aucune annonce pour l’instant...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
